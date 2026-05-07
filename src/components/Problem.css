@@ -56,7 +56,7 @@
 .card-number {
   font-size: 0.875rem;
   font-weight: 700;
-  color: var(--accent-color);
+  color: #F59E0B;
   margin-bottom: var(--spacing-sm);
   letter-spacing: 0.05em;
 }

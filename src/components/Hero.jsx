@@ -13,8 +13,8 @@ export default function Hero() {
             We help independent clinics improve the moments that shape trust, confidence, and action online.
           </p>
           <div className="hero-actions slide-up" style={{ animationDelay: '200ms' }}>
-            <button className="btn btn-primary">Request a Front Door Review</button>
-            <button className="btn btn-secondary">See how it works</button>
+            <a href="mailto:contact@secondfloordigital.co.uk?subject=Front%20Door%20Review%20Request&body=Hi%20Mark%2C%0D%0A%0D%0AI%E2%80%99d%20love%20to%20request%20a%20Front%20Door%20Review%20for%20my%20business.%0D%0A%0D%0ABusiness%20name%3A%0D%0A%0D%0AWebsite%3A%0D%0A%0D%0AWhat%20feels%20like%20it%E2%80%99s%20not%20working%20online%20right%20now%3A%0D%0A%0D%0AThanks%2C" className="btn btn-primary">Request a Front Door Review</a>
+            <a href="#how-it-works" className="btn btn-secondary">See how it works</a>
           </div>
           <p className="hero-review-desc slide-up" style={{ animationDelay: '225ms' }}>
             A 7-day review of your website and booking journey, delivered as a personalised report with clear, practical recommendations.

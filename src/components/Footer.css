@@ -21,8 +21,16 @@
 .footer-brand .footer-logo {
   font-weight: 700;
   font-size: 1.25rem;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.footer-logo .logo-img {
+  height: 64px;
+  width: 64px;
+  object-fit: contain;
 }
 
 .footer-brand p {

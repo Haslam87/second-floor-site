@@ -18,14 +18,8 @@
 .testimonials-grid {
   display: grid;
   gap: var(--spacing-md);
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .testimonials-grid {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 .testimonial-card {

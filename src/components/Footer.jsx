@@ -6,7 +6,10 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-container">
         <div className="footer-brand">
-          <span className="footer-logo">Second Floor Digital</span>
+          <span className="footer-logo">
+            <img src="/logo.png" alt="Second Floor Digital Logo" className="logo-img" />
+            Second Floor Digital
+          </span>
           <p>Trust, Clarity & Conversion for Independent Clinics.</p>
         </div>
         <div className="footer-links">

@@ -36,11 +36,11 @@
 .nav-desktop a {
   font-size: 0.9375rem;
   font-weight: 500;
-  color: var(--text-secondary);
+  color: var(--accent-color);
 }
 
 .nav-desktop a:hover {
-  color: var(--text-primary);
+  color: var(--accent-hover);
 }
 
 @media (min-width: 768px) {

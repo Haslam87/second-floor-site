@@ -20,7 +20,7 @@ export default function SocialProof() {
           </div>
           
           <div className="testimonial-card fade-in" style={{ animationDelay: '200ms' }}>
-            <p className="testimonial-text">"The Front Door Review identified friction points we never noticed. Making those small changes increased our enquiry conversion rate by 40%."</p>
+            <p className="testimonial-text">"The review showed us issues we’d completely overlooked. Within weeks, enquiries felt noticeably stronger."</p>
             <div className="testimonial-author">
               <div className="author-avatar placeholder"></div>
               <div className="author-info">

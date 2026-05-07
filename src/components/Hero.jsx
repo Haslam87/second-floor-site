@@ -17,10 +17,16 @@ export default function Hero() {
             <button className="btn btn-secondary">See how it works</button>
           </div>
           <p className="hero-review-desc slide-up" style={{ animationDelay: '225ms' }}>
-            A 7-day diagnostic review of your website and booking journey, delivered as a personalised insight report with clear, practical recommendations.
+            A 7-day review of your website and booking journey, delivered as a personalised report with clear, practical recommendations.
           </p>
-          <p className="hero-note slide-up" style={{ animationDelay: '250ms' }}>
+          <div className="hero-pricing slide-up" style={{ animationDelay: '235ms' }}>
+            Front Door Reviews start from <span className="pricing-amount">£495</span>
+          </div>
+          <p className="hero-note slide-up" style={{ animationDelay: '245ms' }}>
             Enterprise strategy. Independent business focus.
+          </p>
+          <p className="hero-reassurance slide-up" style={{ animationDelay: '250ms' }}>
+            No obligation. No long-term commitment. Just clarity on what your customers experience.
           </p>
         </div>
         <div className="hero-visual dropoff-journey fade-in" style={{ animationDelay: '300ms' }}>

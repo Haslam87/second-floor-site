@@ -11,8 +11,8 @@
   --text-secondary: #4B5563;
   --text-tertiary: #9CA3AF;
   
-  --accent-color: #0F172A;
-  --accent-hover: #334155;
+  --accent-color: #0B1633;
+  --accent-hover: #132551;
   
   --border-color: #E5E7EB;
   
@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  color: var(--text-primary);
+  color: var(--accent-color);
 }
 
 p {
@@ -76,7 +76,7 @@ p {
 }
 
 a {
-  color: inherit;
+  color: var(--accent-color);
   text-decoration: none;
   transition: color var(--transition-fast);
 }

@@ -77,10 +77,33 @@
   }
 }
 
+.hero-pricing {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  background: rgba(15, 23, 42, 0.02);
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  display: inline-block;
+  letter-spacing: 0.01em;
+}
+
+.pricing-amount {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.hero-reassurance {
+  font-size: 0.875rem;
+  color: color-mix(in srgb, var(--text-tertiary), black 10%);
+  margin-top: 1rem;
+}
+
 .hero-note {
   font-size: 0.875rem;
   color: var(--text-tertiary);
-  margin-top: 0.75rem;
+  margin-top: 1rem;
 }
 
 /* The Silent Drop-Off Journey */

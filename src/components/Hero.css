@@ -63,10 +63,24 @@
   }
 }
 
+.hero-review-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-top: 1.5rem;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+@media (min-width: 992px) {
+  .hero-review-desc {
+    margin-top: 1.5rem;
+  }
+}
+
 .hero-note {
   font-size: 0.875rem;
   color: var(--text-tertiary);
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
 }
 
 /* The Silent Drop-Off Journey */

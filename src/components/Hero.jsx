@@ -16,6 +16,9 @@ export default function Hero() {
             <button className="btn btn-primary">Request a Front Door Review</button>
             <button className="btn btn-secondary">See how it works</button>
           </div>
+          <p className="hero-review-desc slide-up" style={{ animationDelay: '225ms' }}>
+            A 7-day diagnostic review of your website and booking journey, delivered as a personalised insight report with clear, practical recommendations.
+          </p>
           <p className="hero-note slide-up" style={{ animationDelay: '250ms' }}>
             Enterprise strategy. Independent business focus.
           </p>

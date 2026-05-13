@@ -6,7 +6,7 @@ export default function Founder() {
     <section id="about" className="section founder-section">
       <div className="container founder-container">
         <div className="founder-visual slide-up">
-          <div className="founder-portrait placeholder"></div>
+          <img src="/Mark.jpg" alt="Mark Haslam, Founder of Second Floor Digital" className="founder-portrait" />
         </div>
         <div className="founder-content fade-in">
           <h2>After years helping organisations solve complex business problems, Mark created Second Floor to help independent businesses compete where first impressions matter most.</h2>

@@ -25,10 +25,11 @@
   justify-content: center;
 }
 
-.founder-portrait.placeholder {
+.founder-portrait {
   width: 100%;
   max-width: 350px;
   aspect-ratio: 3/4;
+  object-fit: cover;
   background-color: var(--bg-secondary);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);

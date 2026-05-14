@@ -389,3 +389,18 @@
 .journey-branches .journey-card:hover .card-tooltip {
   transform: translateX(-50%) translateY(0);
 }
+
+@media (max-width: 768px) {
+  .branch-left .journey-card,
+  .branch-right .journey-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .branch-left .card-content,
+  .branch-right .card-content {
+    align-items: center;
+  }
+}

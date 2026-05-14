@@ -342,6 +342,7 @@
 .branch-left .journey-card,
 .branch-right .journey-card {
   width: 100%;
+  flex: 1;
   padding: 1rem 0.75rem;
   transform: none;
 }

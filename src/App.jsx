@@ -44,8 +44,8 @@ function App() {
         </h1>
 
         <p className="lede">
-          Delos finds the quiet routes nearby — sorted by feeling, not distance —
-          then steps back once you're walking. Currently taking shape for iOS.
+          Delos suggests a nearby walk worth taking — calm, unhurried, picked by
+          mood rather than mileage — then leaves you to it. In development for iOS.
         </p>
 
         {status === 'sent' ? (

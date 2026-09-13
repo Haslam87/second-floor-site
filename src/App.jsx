@@ -44,8 +44,8 @@ function App() {
         </h1>
 
         <p className="lede">
-          Delos suggests a nearby walk worth taking — calm, unhurried, picked by
-          mood rather than mileage — then leaves you to it. In development for iOS.
+          Every town keeps stories most people walk straight past. Delos surfaces
+          them — quietly, on foot, often better shared. In development for iOS.
         </p>
 
         {status === 'sent' ? (

@@ -4,44 +4,50 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  padding: min(9vh, 72px) 24px 48px;
+  justify-content: center;
+  padding: 48px 24px;
   isolation: isolate;
 }
 
-/* ---------- Atmosphere: the sun rising behind Delos, reflected on the water ----------
-   Uses the real icon artwork (delos-mark.png — the sun occluded by the island's
-   silhouette, plus the reflection line) rather than a redrawn approximation. */
-.atmosphere {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  overflow: hidden;
-}
-.halo {
-  position: absolute;
-  top: 9%;
-  left: 50%;
-  width: min(62vw, 480px);
-  transform: translateX(-50%);
+/* ---------- The sun rising behind Delos, reflected on the water ----------
+   The dome (sun occluded by the island's silhouette) and the reflection line are the
+   real icon artwork, chroma-keyed out separately. This sits in NORMAL DOCUMENT FLOW at
+   the top of .content, not absolutely positioned against the viewport — an earlier
+   version anchored it to the top of the screen while the text column was pushed up from
+   the bottom, so on any viewport that wasn't tall enough the two collided unpredictably
+   (fine on tall mobile screens, broken on wide/short desktop ones). Flow layout makes
+   that class of bug structurally impossible: this can never overlap what follows it. */
+.skyline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: min(58vw, 400px);
   animation: breathe 7s ease-in-out infinite;
 }
-.halo::before {
+.skyline::before {
   content: '';
   position: absolute;
-  inset: -45% -15%;
-  background: radial-gradient(circle at 50% 38%, rgba(217, 168, 86, 0.26), rgba(217, 168, 86, 0) 64%);
+  inset: -70% -25% -30%;
+  background: radial-gradient(circle at 50% 32%, rgba(217, 168, 86, 0.24), rgba(217, 168, 86, 0) 65%);
   z-index: -1;
+  pointer-events: none;
 }
-.heroMark {
+.dome {
+  display: block;
+  width: 46%;
+  height: auto;
+  filter: drop-shadow(0 10px 30px rgba(217, 168, 86, 0.22));
+}
+.reflection {
   display: block;
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 12px 46px rgba(217, 168, 86, 0.22));
 }
 @keyframes breathe {
-  0%, 100% { opacity: .85; transform: translateX(-50%) scale(1); }
-  50% { opacity: 1; transform: translateX(-50%) scale(1.035); }
+  0%, 100% { opacity: .85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.035); }
 }
 
 /* ---------- Content ---------- */
@@ -198,7 +204,7 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .halo { animation: none; }
+  .skyline { animation: none; }
 }
 
 @media (max-width: 420px) {

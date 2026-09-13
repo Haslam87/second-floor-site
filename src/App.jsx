@@ -24,17 +24,12 @@ function App() {
 
   return (
     <div className="stage">
-      <div className="atmosphere">
-        <div className="halo">
-          <img
-            className="heroMark"
-            src="/delos-mark.png"
-            alt="The sun rising behind the island of Delos, reflected on the water"
-          />
-        </div>
-      </div>
-
       <div className="content">
+        <div className="skyline" role="img" aria-label="The sun rising behind the island of Delos, reflected on the water">
+          <img className="dome" src="/delos-dome.png" alt="" />
+          <img className="reflection" src="/delos-line.png" alt="" />
+        </div>
+
         <div className="mark">
           <img src="/delos-badge.png" alt="Delos app icon" />
           <span>Delos</span>

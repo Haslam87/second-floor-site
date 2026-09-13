@@ -44,8 +44,9 @@ function App() {
         </h1>
 
         <p className="lede">
-          Every town keeps stories most people walk straight past. Delos surfaces
-          them — quietly, on foot, often better shared. In development for iOS.
+          Some stories are better found together. Delos helps you and the people
+          you're with uncover the lore behind your own town's streets. In
+          development for iOS.
         </p>
 
         {status === 'sent' ? (

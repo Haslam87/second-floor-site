@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Support · Delos</title>
+<meta name="description" content="Help with the Delos walking app from Second Floor Digital.">
+<link rel="stylesheet" href="/delos/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Delos</div>
+    <h1>Support</h1>
+    <p class="lede">Help with the Delos walking app, from Second Floor Digital.</p>
+  </header>
+
+  <div class="card">
+    <h2>Get in touch</h2>
+    <p>Email us about anything: a bug, a question, a walk that didn't record, or content that breaks our rules. We usually reply within one working day, and we review reported content within 24 hours.</p>
+    <div class="email-row">
+      <a class="email" id="email" href="mailto:Contact@secondfloordigital.co.uk">Contact@secondfloordigital.co.uk</a>
+      <button type="button" id="copy">Copy</button>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-label"><span>Common questions</span><div class="rule"></div></div>
+    <div class="faq">
+      <details>
+        <summary>Why does Delos ask for "Always" location access?</summary>
+        <p>So your walk keeps recording after you lock your phone or switch apps. Delos only tracks your location in the background while a walk is being recorded. You can change this in the iPhone Settings app under Privacy &amp; Security → Location Services → Delos.</p>
+      </details>
+      <details>
+        <summary>My walk stopped recording or the map isn't centred on me</summary>
+        <p>Check that Location for Delos is set to "Always" and Precise Location is on. If you said no to location once, iOS won't ask again; tap "Open Settings" on the map screen to switch it back on.</p>
+      </details>
+      <details>
+        <summary>How do I hide where I live?</summary>
+        <p>Privacy Zone is on by default. The start and end of every walk are trimmed before saving, so they're never stored. You can choose how much is trimmed in Settings.</p>
+      </details>
+      <details>
+        <summary>How do I report someone or something?</summary>
+        <p>Tap Report on any segment, a person's row on a leaderboard (the ⋯ button), a friend's walk, or a friend's profile. You can block the person at the same time. You can also block or remove anyone from your Friends list.</p>
+      </details>
+      <details>
+        <summary>How do I bring in walks from my Apple Watch?</summary>
+        <p>Open History and tap the import button at the top of the screen, then choose the walks you want. Delos reads only walking and hiking workouts and never writes to Apple Health.</p>
+      </details>
+      <details>
+        <summary>How do I cancel or restore Premium?</summary>
+        <p>Subscriptions are billed by Apple. To cancel, open the iPhone Settings app, tap your name, then Subscriptions → Delos. To restore a subscription on a new phone, open the Premium screen in Delos and tap Restore Purchases.</p>
+      </details>
+      <details>
+        <summary>Can I get my walks out of Delos?</summary>
+        <p>Yes. Open any walk and tap Export GPX. GPX files work with most walking and fitness apps.</p>
+      </details>
+      <details>
+        <summary>How do I delete my account?</summary>
+        <p>In Delos, go to Profile → Profile Settings → Delete Account. You're signed out straight away, and your account, walks and photos are permanently deleted within 30 days. If you can't get into the app, email us from the address you signed up with.</p>
+      </details>
+    </div>
+  </section>
+
+  <nav class="links" aria-label="Delos pages">
+    <a href="/delos/privacy/">Privacy Policy</a>
+    <a href="/delos/terms/">Terms of Service</a>
+  </nav>
+
+  <footer>
+    <div class="tag">Every step, revealed</div>
+  </footer>
+</div>
+<script>
+  document.getElementById('copy').addEventListener('click', function () {
+    var btn = this
+    navigator.clipboard.writeText('Contact@secondfloordigital.co.uk').then(function () {
+      btn.textContent = 'Copied'
+    })
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+/* Shared styles for the Delos Privacy Policy, Terms and Support pages. */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600&display=swap');
+
+:root {
+  color-scheme: light dark;
+  --parchment: #faf7f2;
+  --card: #ffffff;
+  --ink: #2d2520;
+  --ink-muted: #7a6e63;
+  --gold: #a8782c;
+  --gold-soft: rgb(196 146 63 / 0.1);
+  --warm-border: #ede4d8;
+  --error: #ba1a1a;
+  --error-container: rgb(186 26 26 / 0.08);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --parchment: #141b13;
+    --card: #1c2419;
+    --ink: #f2ece1;
+    --ink-muted: #b7ab9c;
+    --gold: #d9a856;
+    --gold-soft: rgb(217 168 86 / 0.14);
+    --warm-border: #2d3825;
+    --error: #ffb4ab;
+    --error-container: rgb(255 180 171 / 0.1);
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--parchment);
+  color: var(--ink);
+  font-family: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  margin: 0;
+  padding: 0 max(16px, env(safe-area-inset-right)) 6rem max(16px, env(safe-area-inset-left));
+}
+.wrap { max-width: 700px; margin: 0 auto; }
+
+header { padding: 3.5rem 0 2rem; text-align: center; }
+.eyebrow {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.eyebrow a { color: inherit; text-decoration: none; }
+h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  letter-spacing: -0.01em;
+  margin: 0.75rem 0 0.5rem;
+  text-wrap: balance;
+}
+.updated, .lede { color: var(--ink-muted); font-size: 15px; margin: 0; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--warm-border);
+  border-radius: 20px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 2.5rem;
+}
+.card p { margin: 0 0 0.75rem; }
+.card p:last-child { margin-bottom: 0; }
+
+section { margin-bottom: 2.75rem; }
+.section-label { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.1rem; }
+.section-label span {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  white-space: nowrap;
+}
+.section-label .rule { height: 1px; flex: 1; background: var(--warm-border); }
+
+h2 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-size: 1.4rem; margin: 0 0 0.9rem; }
+h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-size: 1.05rem; margin: 1.4rem 0 0.5rem; }
+p { margin: 0 0 0.9rem; }
+ul { margin: 0 0 0.9rem; padding-left: 1.3rem; }
+li { margin-bottom: 0.5rem; }
+strong { font-weight: 600; }
+a { color: var(--gold); }
+
+.data-table {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) 2fr;
+  gap: 0.4rem 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--warm-border);
+  border-radius: 16px;
+  padding: 1.4rem 1.6rem;
+  margin: 0 0 1.2rem;
+  font-size: 15px;
+}
+.data-table dt { font-weight: 600; }
+.data-table dd { margin: 0 0 0.9rem; color: var(--ink-muted); }
+
+.price-table { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0 1.2rem; }
+.price-card { background: var(--card); border: 1px solid var(--warm-border); border-radius: 16px; padding: 1.3rem 1.4rem; }
+.price-card .amount { font-family: 'Fraunces', Georgia, serif; font-size: 1.6rem; font-weight: 600; color: var(--gold); }
+.price-card .period { font-size: 13px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+.callout {
+  background: var(--gold-soft);
+  border: 1px dashed var(--gold);
+  border-radius: 16px;
+  padding: 1.1rem 1.4rem;
+  font-size: 15px;
+  margin: 1rem 0;
+}
+.callout strong { color: var(--gold); }
+.warning {
+  background: var(--error-container);
+  border: 1px solid rgb(186 26 26 / 0.25);
+  border-radius: 16px;
+  padding: 1.1rem 1.4rem;
+  font-size: 15px;
+  margin: 1rem 0;
+}
+.warning p { margin: 0; }
+.warning strong { color: var(--error); }
+
+/* Support page */
+.email-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin-top: 0.75rem; }
+.email { font-weight: 600; font-size: 1.05rem; user-select: all; word-break: break-all; }
+button {
+  font: inherit; font-size: 13px; color: var(--ink); background: var(--gold-soft);
+  border: 1px solid var(--warm-border); border-radius: 999px; padding: 0.35rem 0.9rem; cursor: pointer;
+}
+button:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.faq { border-top: 1px solid var(--warm-border); }
+details { border-bottom: 1px solid var(--warm-border); padding-block: 0.9rem; }
+summary {
+  cursor: pointer; font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-size: 1.05rem;
+  list-style: none; display: flex; justify-content: space-between; gap: 1rem;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after { content: '+'; color: var(--gold); font-family: 'Hanken Grotesk', system-ui, sans-serif; }
+details[open] summary::after { content: '–'; }
+details p { margin: 0.6rem 0 0; color: var(--ink-muted); max-width: 62ch; }
+
+nav.links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; margin-bottom: 2rem; font-size: 15px; }
+
+footer { text-align: center; padding-top: 2rem; border-top: 1px solid var(--warm-border); }
+footer .tag {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.65;
+}
+
+@media (max-width: 480px) {
+  .price-table { grid-template-columns: 1fr; }
+  .data-table { grid-template-columns: 1fr; padding: 1.2rem; }
+  .data-table dd { margin-bottom: 1.1rem; }
+  .card { padding: 1.25rem; }
+}

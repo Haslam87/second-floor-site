@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Walk with me · Delos</title>
+<meta name="description" content="You've been invited to be friends on Delos, the calm walking app.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/delos/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Delos</div>
+    <h1>Walk with me</h1>
+    <p class="lede">You've been invited to be friends on Delos, the calm walking app.</p>
+  </header>
+
+  <div class="card">
+    <h2>Got Delos?</h2>
+    <p>Open this page on your iPhone and tap the button. You'll be friends straight away.</p>
+    <p><a class="email" id="open" href="delos://friend">Open in Delos</a></p>
+    <p id="code-row" hidden>Invite code: <span class="email" id="code"></span></p>
+  </div>
+
+  <div class="card" id="get-app">
+    <h2>New to Delos?</h2>
+    <p>Delos is in beta on iPhone. Install it, sign in, then come back to this page and tap Open in Delos.</p>
+    <p id="beta-row" hidden><a class="email" id="beta" href="#">Join the beta on TestFlight</a></p>
+  </div>
+
+  <nav class="links" aria-label="Delos pages">
+    <a href="/delos/support/">Support</a>
+    <a href="/delos/privacy/">Privacy Policy</a>
+  </nav>
+
+  <footer>
+    <div class="tag">Every step, revealed</div>
+  </footer>
+</div>
+<script>
+  // The public TestFlight link. Leave empty to hide the "Join the beta" link.
+  var TESTFLIGHT_URL = ''
+
+  var code = (new URLSearchParams(location.search).get('code') || '').replace(/[^A-Za-z0-9_-]/g, '')
+  if (code) {
+    document.getElementById('open').href = 'delos://friend?code=' + encodeURIComponent(code)
+    document.getElementById('code').textContent = code
+    document.getElementById('code-row').hidden = false
+  }
+  if (TESTFLIGHT_URL) {
+    document.getElementById('beta').href = TESTFLIGHT_URL
+    document.getElementById('beta-row').hidden = false
+  }
+</script>
+</body>
+</html>

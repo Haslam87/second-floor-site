@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["4PVVJ68X6W.com.delos.app"],
+        "components": [
+          { "/": "/delos/invite/*", "comment": "Friend invites open in Delos" }
+        ]
+      }
+    ]
+  }
+}
